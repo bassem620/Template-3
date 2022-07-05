@@ -948,3 +948,52 @@ header .mega-menu .links li a i {
 .services .box .info a {
     color: var(--main-color);
 }
+
+/* ########################## Skills ######################### */
+.skills {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+
+.skills .container {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:991px) {
+    .skills .container img {
+        display: none;
+    }
+}
+
+.skills .all-skills {
+    flex: 1;
+}
+
+.skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills .skill h3 span {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+    color: var(--main-color);
+}
+
+.skills .skill .progress {
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+
+.skills .skill .progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
