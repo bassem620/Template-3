@@ -3,8 +3,8 @@
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
     --main-transition: 0.3s;
-    --main-padding-top: 100px;
-    --main-padding-bottom: 100px;
+    --main-padding-top: 50px;
+    --main-padding-bottom: 50px;
     --section-background: #ececec;
 }
 
@@ -53,7 +53,7 @@ ul {
 
 @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+        width: 1070px;
     }
 }
 
@@ -996,4 +996,91 @@ header .mega-menu .links li a i {
     top: 0;
     height: 100%;
     background-color: var(--main-color);
+}
+
+/* ########################## Work steps ######################### */
+.work {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: var(--section-background);
+}
+
+.work .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media (max-width:991px) {
+    .work .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .work .info .box {
+        flex-direction: column;
+    }
+
+    .work .info .box img {
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+    }
+
+    .work .info .box .text {
+        text-align: center;
+    }
+}
+
+.work .image {
+    max-width: 100%;
+}
+
+.work .info .box {
+    background-color: #f6f5f5;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.work .info .box::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #ededed;
+    transition: var(--main-transition);
+    z-index: -1;
+}
+
+.work .info .box:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.work .info .box img {
+    width: 64px;
+    margin-right: 50px;
+}
+
+.work .info .box h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.work .info .box p {
+    margin: 0;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-size: 18px;
 }
